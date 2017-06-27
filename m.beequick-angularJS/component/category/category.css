@@ -1,0 +1,39 @@
+/*@CSS*/
+.main{position: absolute;top: 1.012501rem;right: 0;bottom: 0.922501rem;left: 0;overflow-y: auto;background-color: #efefef;}
+.main .category-list-wrap{position: absolute;left: 0;top: 0;bottom: 0;width: 1.710002rem;font-size: 1.2rem;background-color: #f8f8f8;overflow-y: auto;overflow-x: hidden;}
+.main .category-list-wrap .category-list-item{position: relative;box-sizing: border-box;line-height: 1.080001rem;font-size: 0.27rem;color: #6d6d6d;border-bottom: 1px solid #e0e0e0;text-align: center;background: right top/auto 70% no-repeat;}
+
+
+
+.main .productlist-wrap{position: absolute;left: 1.710002rem;right: 0;bottom: 0;top: 0;}
+.productlist-wrap .product-filter{width: 100%;}
+.productlist-wrap .product-filter li{float: left;width: 50%;text-align: center;line-height: 1.080001rem}
+.productlist-wrap .product-filter .product-filter-sub:after,.productlist-wrap .product-filter .product-filter-sort:after{display: inline-block;vertical-align: top;width: .324rem;height: 1.080001rem;content: '';background: url(../../img/06.png) center center no-repeat;background-size: 0.27rem;-webkit-transition: -webkit-transform .3s;-webkit-transform: rotate(0);}
+
+
+
+
+.main .productlist-wrap .product-filter-wrap{position: relative;box-sizing: border-box;height: 1.102501rem;border-bottom: 1px solid #e0e0e0;background-color: rgba(255,255,255,.95);}
+.productlist-wrap .product-filter-wrap .product-filter-box{display: none;position: absolute;top: 1.102501rem;z-index: 10;width: 100%;height: 9.74251rem;background-color: rgba(0,0,0,.2);}
+.product-filter-wrap .product-filter-box .product-filter-tags-sub,.product-filter-wrap .product-filter-box .product-filter-tags-sort{background-color: rgba(255,255,255,.95);display: none;}
+
+
+.main .productlist-wrap .productlist{position: absolute;top: 1.102501rem;left: 0;bottom: 0;right: 0;overflow-y: auto;overflow-x: hidden;}
+.productlist-wrap .productlist .goodslist-item{box-sizing: border-box;position: relative;padding: 0.135rem;border-bottom: 1px solid #e0e0e0;background-color: #fff;}
+.productlist-wrap .productlist .goodslist-item:last-of-type{border-bottom: 0;}
+.productlist-wrap .productlist .goodslist-img{float: left;padding-top: 2.160002rem;width: 2.160002rem;text-align: center;color: #232b33;background:top center/cover no-repeat;}
+.productlist-wrap .productlist .goodslist-box{float: left;padding-left: 0.09rem;width: 2.970003rem}
+.goodslist-item .productlist-name{width: 100%;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;font-size: 0.27rem;line-height: 0.540001rem;}
+.goodslist-item .goodslist-promotion{line-height: 0.540001rem;min-height: .432rem;}
+.goodslist-item .goodslist-promotion .pm-embossed{display: inline-block;padding: .054rem .054rem;margin-right: .081rem;border: 1px solid red;border-radius: .108rem;font-size: .27rem;line-height: .27rem;color: red;vertical-align: .027rem;}
+.goodslist-item .goodslist-promotion .pm-intaglio{display: inline-block;padding: .054rem .054rem;margin-right: .081rem;border: 1px solid red;border-radius: .108rem;font-size: .27rem;line-height: .27rem;color: #fff;background-color: red;vertical-align: .027rem;}
+.goodslist-item .pm-specifit,.goodslist-item .market-price{color: #999;line-height: 0.540001rem;}
+.goodslist-item .market-price{text-decoration: line-through;}
+.goodslist-item .partner-price{color: #ff3800;line-height: 0.540001rem;}
+.block{height: 6.750007rem}
+
+
+
+
+
+

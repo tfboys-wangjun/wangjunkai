@@ -1,0 +1,66 @@
+<div class="main">
+	<div id="wrap">
+		<div class="swiper-container">
+   			<div class="swiper-wrapper" ng-repeat="acts in obj" ng-if="acts.type =='focus'">
+				<div class="swiper-slide" ng-repeat="item in acts.act_rows">
+            		<img src="{{item.activity.img}}" alt="">
+        		</div>
+    		</div>
+    		<!-- 如果需要分页器 -->
+   			<div class="swiper-pagination">
+   		 	
+   			</div>
+		</div>
+	</div>	
+	<div class="icons" ng-repeat="acts in obj" ng-if="acts.type =='icon'">
+		<div class="icon-item" ng-repeat="item in acts.act_rows">
+			<div class="icon" style="background-image:url({{item.activity.img}})"></div>
+			<p>{{item.activity.name}}</p>
+		</div>
+	</div>
+	<div class="brand-box f-cb" ng-repeat="acts in obj" ng-if="acts.type =='brand'">
+		<div class="brand-item" ng-repeat="item in acts.act_rows" style="background-image:url({{item.activity.img}})">	
+		</div>
+	</div>
+	<div class="business" ng-repeat="acts in obj" ng-if="acts.type =='business'">
+		<div class="business-title" ng-repeat="item in acts.act_rows" ng-if="item.type=='chead'" style="background-image:url({{item.act_rows[0].chead_detail.img}})">
+		</div>
+		<div class="business-cactivity" ng-repeat="item in acts.act_rows" ng-if="item.type=='cactivity'">
+			<div class="cactivity-inner" ng-repeat="inner in item.act_rows">
+				<img src="{{inner.cactivity_detail.img}}">
+			</div>
+		</div>
+		<div class="business-sub" ng-repeat="item in acts.act_rows" ng-if="item.type=='cicons'">
+			<div class="business-sub-item" ng-repeat="inner in item.act_rows" style="background-image:url({{inner.cicons_detail.img}})">{{inner.cicons_detail.name}}</div>
+		</div>
+		<div class="business-cscene f-cb" ng-repeat="item in acts.act_rows" ng-if="item.type=='cscene'">
+			<div class="business-cscene-item" ng-repeat="inner in item.act_rows" style="background-image:url({{inner.cscene_detail.img}})">
+			</div>
+		</div>
+	</div>
+	<div class="acts-category" ng-repeat="acts in obj" ng-if="acts.type =='category'">
+		<div class="acts-category-item" ng-repeat="item in acts.act_rows">
+			<div class="category-item-header">
+				<span class="item-header-title" style="color:#{{item.category_detail.category_color}};border-color:#{{item.category_detail.category_color}}">{{item.category_detail.name}}</span>
+				<span class="item-header-more">更多</span>
+			</div>
+			<div class="acts-category-banner" style="background-image:url({{item.activity.img}})"></div>
+			<ul class="acts-category-goodslist f-cb">
+				<li class="goodslist-item" ng-repeat="info in item.category_detail.goods">
+					<div class="goodslist-img" style="background-image:url({{info.img}})">{{info.name}}</div>
+					<div class="goodslist-promotion">
+						<span class="pm-embossed" ng-if="info.is_xf=='1'">精选</span>
+						<span class="pm-intaglio" ng-repeat="x in info.pm_tags" ng-if="info.pm_tags.length!= 0">{{x}}</span>
+					</div>
+					<p class="pm-specifit">{{info.specifics}}</p>
+					<div class="goodslist-price-box">
+						<span class="partner-price">¥{{info.partner_price}}</span>
+						<span class="market-price" ng-if="info.partner_price!=info.market_price">¥{{info.market_price}}</span>
+					</div>
+					<div class="add-btn"></div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+</div>

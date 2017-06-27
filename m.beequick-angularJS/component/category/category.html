@@ -1,0 +1,55 @@
+<div class="main">
+	<div class="category-list-wrap">
+		<ul class="category-list">
+			<li class="category-list-item" data-tap="categoryTap|{{item.id}}" ng-click="tip(item.id)" ng-repeat="item in cate">{{item.name}}</li>
+		</ul>
+	</div>
+	<div class="productlist-wrap">
+		<div class="product-filter-wrap">
+			<ul class="product-filter f-cb">
+				<li class="product-filter-sub" ng-click="showSub()">全部分类</li>
+				<li class="product-filter-sort" ng-click="showSort()">综合排序</li>
+			</ul>
+			<div class="product-filter-box" style="display: {{d}}">
+				<div class="product-filter-tags-sub" ng-repeat="item in cate" ng-if="item.id == x" style="display: {{dn}}">
+					<span class="filter-tags-inner" ng-repeat="sub in item.cids" ng-click="showA(sub.name)">{{sub.name}}</span>
+				</div>
+				<div class="product-filter-tags-sort" style="display: {{db}}">
+					<span class="filter-tags-inner" ng-click="showB('')">综合排序</span>
+					<span class="filter-tags-inner" ng-click="showB('product_num')">销量最高</span>
+					<span class="filter-tags-inner" ng-click="showB('partner_price')">价格最低</span>
+					<span class="filter-tags-inner" ng-click="showB('-partner_price')">价格最高</span>
+				</div>
+			</div>
+		</div>
+		<ul class="productlist">
+			<!-- <li class="product-item"  ng-repeat="key in prod[x] | orderBy:sortStyle | filter:fuck">
+				{{key.name}}
+			</li> -->
+			<li class="goodslist-item f-cb" ng-repeat="key in prod[x] | filter:name | orderBy:sortStyle">
+					<div class="goodslist-img" style="background-image:url({{key.img}})"></div>
+					<div class="goodslist-box">
+						<div class="productlist-name">{{key.name}}</div>
+						<div class="goodslist-promotion">
+							<span class="pm-embossed" ng-if="key.is_xf=='1'">精选</span>
+							<span class="pm-intaglio" ng-repeat="x in key.pm_tags" ng-if="key.pm_tags.length!= 0">{{x}}</span>
+						</div>
+						<p class="pm-specifit">{{key.specifics}}</p>
+						<div class="goodslist-price-box">
+							<span class="partner-price">¥{{key.partner_price}}</span>
+							<span class="market-price" ng-if="key.partner_price!=key.market_price">¥{{key.market_price}}</span>
+						</div>
+						<div class="add-btn"></div>
+					</div>
+				</li>
+		</ul>
+
+
+
+	</div>
+
+
+
+
+
+</div>

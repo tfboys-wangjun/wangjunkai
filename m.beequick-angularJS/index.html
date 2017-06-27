@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script type="text/javascript">
+         /*动态设置像素比*/
+        var iScale = 1;
+        
+        document.write('<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=' + iScale + ',minimum-scale=' + iScale + ',maximum-scale=' + iScale + '">')
+        /*动态设置文字大小*/
+        var iWidth = document.documentElement.clientWidth;
+        document.getElementsByTagName('html')[0].style.fontSize = iWidth / 7.2+ 'px';
+    </script>
+    <style>
+        body,h1,h2,h3,p,dl,dd,ol,ul,th,td,form,fieldset,input,button,textarea{margin:0;padding:0}
+        html{-webkit-text-size-adjust:none;word-wrap:break-word}
+        h1,h2,h3{font-size:100%}
+        ol,ul{list-style:none}
+        table{border-collapse:collapse;border-spacing:0;empty-cells:show;font-size:inherit}
+        fieldset,img{border:0}
+        cite,em,s,i,b{font-style:normal}
+        input,button,textarea,select{font-size:100%}
+        body,input,button,textarea,select,option{font-size:normal}
+        a,input,textarea{text-decoration:none;outline:0}
+        li,img,label,input{vertical-align:middle}
+        body{font-size:.2rem;color:#333}
+        a{color:#333}
+        html,body,.wrap{height: 100%}
+        .f-cb:after{display:block;clear:both;visibility:hidden;height:0;overflow:hidden;content:".";}
+        .wrap{position: relative;z-index: 2;margin: 0 auto;width: 7.2rem}
+        .main-wrap{position: absolute;top: 0;left: 0;bottom: 0;right: 0;}
+        .footer{position: fixed;left: 0;bottom: 0;right: 0;z-index: 99;background: #fff;border-top: 1px solid #e0e0e0;}
+        .footer ul{display: box;display: -webkit-box;box-align: center;-webkit-box-align: center;box-pack: center;-webkit-box-pack: center;}
+        .footer ul li{-webkit-box-flex: 1;box-flex: 1;width: 100%;text-align: center}
+        .footer ul li>a{display: block;padding: .12rem 0}
+        .footer .nav-list .pr{width: .4rem;height: .4rem;-webkit-background-size: cover;background-size: cover;overflow: hidden;margin: 0 auto .08rem} 
+        .footer .nav-list .ih{background-image: url(img/011.png)}
+        .footer .nav-list .ic{background-image: url(img/022.png)}
+        .footer .nav-list .is{background-image: url(img/033.png)}
+        .footer .nav-list .if{background-image: url(img/044.png)}
+        .footer li>a.on .nav-list .ih{background-image: url(img/01.png)}
+        .footer li>a.on .nav-list .ic{background-image: url(img/02.png)}
+        .footer li>a.on .nav-list .is{background-image: url(img/03.png)}
+        .footer li>a.on .nav-list .if{background-image: url(img/04.png)}
+        .footer .nav-list p{font-size: .22rem;line-height: .8;color: #999}
+    </style>
+    <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/angular-route/1.3.13/angular-route.js"></script>
+    <script src="js/angular-css.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="app.js"></script>
+    <script src="component/home/home.js"></script>
+    <script src="component/category/category.js"></script>
+    <script src="component/cart/cart.js"></script>
+</head>
+<body ng-app="beequick">
+    <div class="wrap">
+        <div ng-view class="main-wrap">
+            
+        </div>
+    <!-- 底部栏 -->
+        <div class="footer">
+            <ul>
+                <li><a href="#/home" class="on"><div class="nav-list"><div class="ih pr"></div><p>首页</p></div></a></li>
+                <li><a href="#/category"><div class="nav-list"><div class="ic pr"></div><p>分类</p></div></a></li>
+                <li><a href="#/cart"><div class="nav-list"><div class="is pr"></div><p>购物车</p></div></a></li>
+                <li><a href="#/user"><div class="nav-list"><div class="if pr"></div><p>我的</p></div></a></li>
+            </ul>
+        </div>
+    <!-- 底部栏 END -->    
+    </div>
+</body>
+</html>
